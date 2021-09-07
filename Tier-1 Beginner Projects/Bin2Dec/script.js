@@ -18,6 +18,7 @@ input.addEventListener('keyup', (e) => {
         input.value = ''
     }else if(e.target.value.length > 8) {
         result.style.color = 'red'
+        alert('maximum length of 8')
         result.innerHTML = 'maximum length 8'
         input.value = ''
     } else {
