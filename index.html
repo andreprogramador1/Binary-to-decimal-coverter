@@ -5,38 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bin to Dec</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <style>
-        * {
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-        }
-
-        body {
-            background-color: #fafafa;
-            font-family: sans-serif;
-        }
-
-        main {
-            padding: 50px 100px;
-        }
-
-        input {
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .btn-form {
-            padding: 5px;
-            border: 1px solid #ccc;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-    </style>
     <main>
         <form>
             <input class="input-form" type="number">
@@ -48,41 +19,5 @@
     </main>
 </body>
 
-<script>
-    const main = document.querySelector('main')
-    const input = document.querySelector('.input-form')
-    const form = document.querySelector('form')
-    const result = document.querySelector('.result')
-
-    let title = document.createElement('h1')
-    title.innerHTML = 'Binary to Decimal'
-    main.prepend(title)
-
-    form.style.marginTop = '16px'
-    form.style.marginBottom = '8px'
-
-    input.addEventListener('keyup', (e) => {
-        const keyCode = e.keyCode || e.which
-        if (keyCode !== 48 && keyCode !== 49) {
-            result.style.color = 'red'
-            result.innerHTML = 'only 1 and 0 allowed'
-            input.value = ''
-        }else if(e.target.value.length > 8) {
-            result.style.color = 'red'
-            result.innerHTML = 'maximum length 8'
-            input.value = ''
-        } else {
-            result.style.color = 'black'
-            result.innerHTML = ''
-        }
-        
-    })
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault() 
-        var digit = parseInt(input.value, 2);
-        result.innerHTML = `Decimal Value: ${digit}`
-    })
-
-</script>
+<script src="script.js"></script>
 </html>
